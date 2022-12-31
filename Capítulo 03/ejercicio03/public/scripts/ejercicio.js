@@ -16,7 +16,12 @@ function condicionales() {
     */
 
     /* Inicio */
-    
+    if ( edad >= 18 && estado == 'CA'){
+        mensaje1 = 'Puede manejar'
+    }else{
+        mensaje1 = 'No puede manejar'
+    }
+        
     /* Fin */
 
     let velocidad = 90;
@@ -29,7 +34,7 @@ function condicionales() {
     */
 
     /* Inicio */
-    
+    mensaje2 = velocidad >= 120 ?  'Muy rápido' : 'OK';
     /* Fin */
 
     return mensaje1 + ' '+ mensaje2;
@@ -53,7 +58,9 @@ function repeticion() {
     */
     
     /*Inicio*/
-    
+    for (i=1 ; i<5 ; i++){
+        elementos1.push(i);
+    }
     /*Fin*/
 
     let elementos2 = [];
@@ -67,6 +74,10 @@ function repeticion() {
     */
 
     /*Inicio*/
+
+    for (clave in objeto){
+        elementos2.push(objeto[clave]);
+    }
     
     /*Fin*/
 
@@ -92,6 +103,9 @@ function funciones() {
     */
 
     /*Inicio*/
+    funcionAnonima = function() {
+        resultado1 = 'Función anónima';
+    }
     
     /*Fin*/
 
@@ -106,6 +120,7 @@ function funciones() {
     */
 
     /*Inicio*/
+    funcionFlecha = () => {resultado2 = 'Función flecha'};
     
     /*Fin*/
 

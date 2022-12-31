@@ -15,7 +15,8 @@ function byId() {
 
 
     /*Inicio*/
-
+    elemento = document.getElementById("nombre");
+    elemento.textContent = 'Muhammed Erdem';
     /*Fin*/
 }
 
@@ -38,7 +39,9 @@ function byClass() {
 
 
     /*Inicio*/
-
+    arreglo = document.getElementsByClassName('profile-card-loc__txt');
+    elemento = arreglo[0];
+    elemento.textContent = 'Istanbul, Turkey';
     /*Fin*/
 
 }
@@ -63,6 +66,9 @@ function byTagName() {
 
 
     /*Inicio*/
+    arreglo = document.getElementsByTagName('img');
+    elemento = arreglo[0];
+    elemento.setAttribute('src','https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg');
 
     /*Fin*/
 
@@ -107,6 +113,8 @@ function querySelector() {
 
 
     /*Inicio*/
+    elemento = document.querySelector('div.profile-card-inf');
+    elemento.innerHTML = textoHTML;
 
     /*Fin*/
 

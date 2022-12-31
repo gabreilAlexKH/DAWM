@@ -2,6 +2,7 @@ let socket = io("ws://localhost:3000");
  
 //Arreglo vacío: registros
 /* Inicio */
+let registros = new Array();
 
 /* Fin */
 
@@ -12,7 +13,7 @@ socket.on('new', (data) => {
 
     //Agregue data al final del arreglo registros, con push 
     /* Inicio */
-
+    registros.push(data);
     /* Fin */
 
 
@@ -24,11 +25,13 @@ socket.on('new', (data) => {
         //Asigne el i-ésimo elemento en la variable inicio 
         /* Inicio */
 
+        let inicio = registros[i]
         /* Fin */
 
 
         //Asigne el i+1-ésimo elemento en la variable fin 
         /* Inicio */
+        let fin = registros[i+1]
         
         /* Fin */
 
@@ -38,7 +41,7 @@ socket.on('new', (data) => {
         /* Inicio */
         plantillaRow += `
             <tr>
-                <td style="--start: ${}; --size: ${}"> <span class="data"> ${} </span> </td>
+                <td style="--start: ${inicio.value}; --size: ${fin.value}"> <span class="data"> ${fin.value} </span> </td>
             </tr>
         `
         /* Fin */
@@ -54,6 +57,10 @@ socket.on('new', (data) => {
         //Elimine el valor del frente del arreglo registros, con shift
     /* Inicio */ 
     
+    if(registros.length > 20){
+
+        registros.shift()
+    }
 
     /* Fin */
 

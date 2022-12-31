@@ -62,6 +62,10 @@ function cargarDocumento() {
     */
 
     /* Inicio */
+
+    arreglo = document.getElementsByClassName('respuesta');
+    elemento = arreglo[0];
+    elemento.innerHTML = snippet;
     
     /* Fin */
 
@@ -147,6 +151,21 @@ function mouseClick() {
 
 
     /*Inicio*/
+    audio = document.getElementById('audio1');
+    arreglo = document.getElementsByClassName('plItem');
+    
+    for (let index = 0; index < arreglo.length; index++) {
+
+      elemento = arreglo[index];
+      let id = elemento.getAttribute("id")-1
+      let name = elemento.getAttribute("name")
+      
+      elemento.addEventListener('click' , () => {
+        audio.setAttribute("src","https://archive.org/download/mythium/"+name+".mp3")
+        audio.play()
+      });
+
+    }
     
     /*Fin*/
 

@@ -9,6 +9,9 @@
 
 article {
 
+  display: grid;
+  grid-template-columns: 25% 75%;
+
 }
 
 /* Fin */
@@ -27,6 +30,9 @@ article {
 
   div.respuesta article {
 
+    display: grid;
+    grid-template-columns: 100%;
+
   }
 
 }
@@ -44,6 +50,8 @@ article {
 @media screen and (max-width: 640px) {
 
   div.right img {
+
+    display: none;
     
   }
 

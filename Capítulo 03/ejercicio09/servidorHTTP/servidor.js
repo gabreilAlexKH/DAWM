@@ -22,6 +22,7 @@ const manejadorPeticiones = (req, res) => {
             
             //Agregue a la respuesta la cabecera 'Access-Control-Allow-Origin' para 'http://localhost:8001'
             /* Inicio */
+            res.setHeader('Access-Control-Allow-Origin' , 'http://localhost:8001')
             
             /* Fin */
 

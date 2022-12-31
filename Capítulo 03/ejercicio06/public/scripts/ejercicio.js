@@ -61,7 +61,7 @@ let animarCartas = (carta) => {
 // Petición async/await
 // Convierta la función flecha como async
 
-let cargarLibros = () => {
+let cargarLibros = async () => {
 
     let plantilla, arreglo, contenedor;
 
@@ -69,25 +69,25 @@ let cargarLibros = () => {
    
     // Petición async/await
     // Anteponga await a la petición fetch   
-    let resultado = fetch("https://dataserverdawm.herokuapp.com/libros/xml")
+    let resultado = await fetch("https://dataserverdawm.herokuapp.com/libros/xml")
 
     // Anteponga await a la conversión de la variable resultado a texto
-    let data = resultado.text()
+    let data = await resultado.text()
 
     const parser = new DOMParser();
     const xml = parser.parseFromString(data, "application/xml");
   
     // Utilice el selector 'libros > libro'
-    let books = xml.querySelectorAll('')
+    let books = xml.querySelectorAll('libros > libro')
 
     books.forEach( book => {
 
       // Extraiga el contenido del texto para las etiquetas: title, isbn y shortDescription.
       // Utilice el operador condicional ternario para validar la existencia de las etiquetas previo a extraer el contenido del texto
       let thumbnailUrl = book.querySelector('thumbnailUrl')?book.querySelector('thumbnailUrl').textContent:''
-      let title = ''
-      let isbn = ''
-      let shortDescription = ''
+      let title = book.querySelector('title')?book.querySelector('title').textContent:''
+      let isbn = book.querySelector('isbn')?book.querySelector('isbn').textContent:''
+      let shortDescription = book.querySelector('shortDescription')?book.querySelector('shortDescription').textContent:''
       
 
       plantilla = `

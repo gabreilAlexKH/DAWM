@@ -43,7 +43,57 @@
     
     <div class="respuesta">
       <!-- Inicio -->
-      
+      <form id="formulario">
+        <label for="nombrescompletos">Nombres completos:</label>
+        <input type="text" id="nombrescompletos" name="nombrescompletos" required="required"/>
+        <br>
+
+        <label for="correoelectronico">Correo electrónico: </label>
+        <input type="email" id="correoelectronico" name="correoelectronico" required="required"/>
+        <br>
+
+        <label>Género:</label>
+        <br>
+        <input type="radio" id="femenino" name="genero" value="femenino">
+        <label for="femenino">Femenino</label>
+        <br>
+
+        <input type="radio" id="masculino " name="genero" value="masculino ">
+        <label for="masculino ">Masculino</label>
+        <br>
+
+        <input type="radio" id="noresponder " name="genero" value="noresponder " checked="checked">
+        <label for="noresponder ">Prefiero no responder</label>
+        <br>
+        
+        <label for="fechanacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fechanacimiento" name="fechanacimiento" required="required"/>
+        <br> 
+
+        <label for="sistemaoperativo">Sistema Operativo:</label>
+        <select id="sistemaoperativo" name="sistemaoperativo">
+          <option value="windows">Windows</option>
+          <option value="linux">Linux</option>
+          <option value="macos">MacOS </option>
+        </select>
+        <br>
+
+        <label  for="puntuacion">Puntuación:</label>
+        <input type="number" id="puntuacion" name="puntuacion" min="1" max="10"/>
+        <br>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="10" cols="50"></textarea>
+        <br>
+
+        <input type="checkbox"  id="nosoyunrobot" value="nosoyunrobot"> 
+        <label for="nosoyunrobot">No soy un robot</label>
+        <br>
+
+        <button type="submit" name="enviar">Enviar</button>
+        <button type="reset" name="reiniciar">Cancelar</button>
+        
+      </form>
       <!-- Fin -->
     </div>
   </body>

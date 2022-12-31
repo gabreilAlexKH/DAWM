@@ -11,10 +11,18 @@ let interfazPropiedades = () => {
 	//Defina la variable person de acuerdo con la interfaz Person
 
 	/* Inicio */
-	
+	let person:Person;
+    person = {
+        ssn: "45785641",
+        firstName: "Juan",
+        lastName: "Mera",
+        age: 35,
+        married: false
+
+    }
 	/* Fin */
 
-	return person
+	return person;
 }
 
 console.log(interfazPropiedades())

@@ -3,10 +3,10 @@ let anotacionEntero = () => {
 	
 	//Agregue el tipo de dato number a la variable numero
 	/* Inicio */
-	let numero = 1
+	let numero: number = 1
 
 	//comente esta línea
-	numero += '45'
+	//numero += 45
 	/* Fin */
 
 	return numero + 236;
@@ -16,7 +16,7 @@ let anotacionCadena = () => {
 	
 	//Cambie el tipo de dato a string, de la variable mensaje 
 	/* Inicio */
-	let mensaje: number;
+	let mensaje: string;
 	/* Fin */
 
 	mensaje = 'Mensaje de texto';
@@ -31,7 +31,7 @@ let anotacionArray = (valor: number, cadena: string) => {
 
 	//Comente las líneas que producen error
 	/* Inicio */
-	skills.push(valor)
+	//skills.push(valor)
 	skills.push(cadena)
 	/* Fin */
 
@@ -46,7 +46,7 @@ let anotacionAny = () => {
 	//Nota: use el tipo any solo cuando NO se conoce el tipo de dato
 	
 	/* Inicio */
-	let New_Array: string[] = [1,"data1"];
+	let New_Array: any[] = [1,"data1"];
 	/* Fin */
 	New_Array.push("data2");
 	New_Array.push(2)
@@ -68,8 +68,8 @@ let anotacionObjeto = () => {
 	//Asigne el valor 30 a la propiedad age
 	/* Inicio */
 	person = {
-	   name: 30,
-	   age: 'Jayme'
+	   name: 'Jayme',
+	   age: 30
 	};
 	/* Fin */
 

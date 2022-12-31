@@ -10,6 +10,7 @@ function definicionVariablesConstantes() {
     */
 
     /* Inicio */
+    let mensaje = "Este es un mensaje desde ";
     
     /* Fin */
 
@@ -19,6 +20,7 @@ function definicionVariablesConstantes() {
     */
 
     /* Inicio */
+    const LENGUAJE = "Javascript";
     
     /* Fin */
 
@@ -47,7 +49,19 @@ function definicionObjeto() {
     */
 
     /*Inicio*/
-   
+    let contacto ={
+        nombre: 'Juana',
+        apellido: 'Perez',
+        edad: 46,
+        casado: false,
+        sueldo: 1289.36,
+        direccion:{
+            pais: 'Ecuador',
+            provincia: 'Guayas',
+            ciudad: 'Guayaquil'
+        }
+
+    }
     /*Fin*/
 
     return contacto.nombre + ' ' + contacto.apellido + ' de ' + contacto.direccion.pais + ', con ' + contacto.edad + ' años.'
@@ -65,6 +79,8 @@ function definicionArreglos() {
     */
 
     /*Inicio*/
+
+    let colores = ['rojo', 'verde', 'azul'];
     
     /*Fin*/
 
@@ -73,12 +89,16 @@ function definicionArreglos() {
     */
     /*Inicio*/
 
+    colores[1] = 'amarillo';
+
     /*Fin*/
 
     /*
         Agregue el color 'rosado' al final de la lista con método push
     */
     /*Inicio*/
+
+    colores.push('rosado');
 
     /*Fin*/
 
@@ -87,6 +107,8 @@ function definicionArreglos() {
         Asigne a resultado la conversión del arreglo colores a cadena de caracteres usando el método toString()
     */
     /*Inicio*/
+
+    let resultado = colores.toString();
 
     /*Fin*/
 
@@ -110,7 +132,7 @@ function metodosArreglos() {
     */
 
     /*Inicio*/
-    
+    let doubled = numeros.map( num => num * 2);
     /*Fin*/
 
     /*
@@ -123,7 +145,7 @@ function metodosArreglos() {
     */
 
     /*Inicio*/
-    
+    let sum = doubled.reduce( (acumulador, numero ) => acumulador + numero);
     /*Fin*/
 
     /*
@@ -136,7 +158,7 @@ function metodosArreglos() {
     */
 
     /*Inicio*/
-    
+    let exists = numeros.some( num => num >= 2 && num < 4);
     /*Fin*/
 
 
@@ -150,10 +172,10 @@ function metodosArreglos() {
     */
 
     /*Inicio*/
-    
+    let filtered = doubled.filter( num => num > 5);
     /*Fin*/
 
-    return 'Map: '+doubled.toString()+' - Reduce:'+sum.toString()+' - Some: '+exists.toString()+' - Filtered: '+filtered.toString()
+    return 'Map: '+ doubled.toString()+' - Reduce:'+sum.toString()+' - Some: '+exists.toString()+' - Filtered: '+filtered.toString()
 
 }
 
